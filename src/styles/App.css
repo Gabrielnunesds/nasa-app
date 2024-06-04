@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    /* background-image: url('path_to_background_image'); Removido para correção */
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    background-color: rgba(11, 61, 145, 0.9); /* Fundo semitransparente */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header nav a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Space Mono', monospace;
+  }
+  
+  .header nav a:hover {
+    color: #ff0000;
+  }
+  
+  .button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+  }
+  
+  .button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+  }
+  
+  .card {
+    background-color: rgba(47, 47, 47, 0.9); /* Fundo semitransparente */
+    border: 1px solid #0b3d91;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card img:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #0b3d91;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 3em;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  p {
+    color: #d0d0d0;
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      margin: 10px;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header nav a {
+      margin: 5px 0;
+    }
+  }
+  
+  /* Estrelas animadas no fundo */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  body::before,
+  body::after {
+    animation: animStar 100s linear infinite;
+    background: transparent;
+  }
+  
+  body::after {
+    animation-duration: 50s;
+  }
+  
+  @keyframes animStar {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 10000px 10000px;
+    }
+  }
+  
